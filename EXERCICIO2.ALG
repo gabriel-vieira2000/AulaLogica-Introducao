@@ -1,21 +1,25 @@
-Algoritmo "apresentacaoComVariaveis"
-// Descrição   : Apresentação novamente, mas agora trabalhando com variáveis
+Algoritmo "exercicio2"
+// Descrição   : Cálculo da Média Harmônica
 // Autor(a)    : Gabriel Vieira Cardoso
-// Data atual  : 11/01/2023
+// Data atual  : 12/01/2023
+
 Var
-   nome: caracter
-   profissao: caracter
-   cidade: caracter
+   nomeAluno : caractere
+   nota1, nota2, nota3, mediaHarmonica : real
    
 Inicio
-   escreval("Digite seu nome: ")
-   leia(nome)
-   escreval("Digite sua profissão:")
-   leia(profissao)
-   escreval("Digite sua cidade:")
-   leia(cidade)
-   escreval("NOME: "+nome)
-   escreval("PROFISSAO: "+profissao)
-   escreval("CIDADE: "+cidade)
+   escreva("Digite o nome do(a) aluno(a): ")
+   leia(nomeAluno)
+   escreva("Digite a primeira nota:")
+   leia(nota1)
+   escreva("Digite a segunda nota:")
+   leia(nota2)
+   escreva("Digite a terceira nota:")
+   leia(nota3)
+   
+   mediaHarmonica <- 3/(1/nota1 + 1/nota2 + 1/nota3);
+   
+   escreval("NOME DO(A) ALUNO(A): "+nomeAluno)
+   escreval("MÉDIA HARMÔNICA DAS NOTAS: ",mediaHarmonica)
 
 Fimalgoritmo
