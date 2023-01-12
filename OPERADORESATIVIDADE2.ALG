@@ -1,5 +1,5 @@
 Algoritmo "operadoresAtividade2"
-// Descrição   : Uso dos operadores aritméticos sobre dois números
+// Descrição   : Cálculo da Área de um Triângulo
 // Autor(a)    : Gabriel Vieira Cardoso
 // Data atual  : 12/01/2023
 Var
