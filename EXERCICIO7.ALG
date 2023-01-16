@@ -1,17 +1,21 @@
 Algoritmo "exercicio7"
-// Descrição   : Conversão de graus Celsius em Fahrenheit
+// Descrição   : Cálculo da Área de um Trapézio
 // Autor(a)    : Gabriel Vieira Cardoso
 // Data atual  : 12/01/2023
 
 Var
-   temperaturaCelsius, temperaturaFahrenheit : real
+   baseMaiorTrapezio, baseMenorTrapezio, alturaTrapezio, areaTrapezio : real
    
 Inicio
-   escreva("Digite uma temperatura (em graus Celsius): ")
-   leia(temperaturaCelsius)
+   escreva("Digite a base maior de um trapézio: ")
+   leia(baseMaiorTrapezio)
+   escreva("Digite a base menor de um trapézio: ")
+   leia(baseMenorTrapezio)
+   escreva("Digite a  altura de um trapézio: ")
+   leia(alturaTrapezio)
    
-   temperaturaFahrenheit <- (temperaturaCelsius * 9/5) + 32;
+   areaTrapezio <- ((baseMaiorTrapezio + baseMenorTrapezio) * alturaTrapezio)/2;
    
-   escreva("Essa temperatura equivale em Fahrenheit a: ",temperaturaFahrenheit," graus")
+   escreva("A área desse trapézio é: ",areaTrapezio, "cm²")
 
 Fimalgoritmo
