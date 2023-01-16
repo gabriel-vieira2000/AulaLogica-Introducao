@@ -5,6 +5,7 @@ Algoritmo "exercicio9"
 
 Var
    ladoA, ladoB, ladoC : real
+   primeiraCondicaoIsosceles, segundaCondicaoIsosceles, terceiraCondicaoIsosceles: logico
    oTrianguloPodeSerFormado, oTrianguloEhEquilatero, oTrianguloEhEscaleno, oTrianguloEhIsosceles : logico
    
 Inicio
@@ -15,14 +16,18 @@ Inicio
    escreva("Insira o último lado para esse Triângulo: ")
    leia(ladoC)
    
-   oTrianguloPodeSerFormado <- (ladoA+ladoB)>ladoC e (ladoA+ladoC)>ladoB e (ladoB+ladoC)>ladoA;
-   oTrianguloEhEquilatero <- ladoA=ladoB e ladoB=ladoC;
-   oTrianguloEhEscaleno <- ladoA<>ladoB e ladoB<>ladoC e ladoC<>ladoA;
-   oTrianguloEhIsosceles <- (ladoA=ladoB e ladoB<>ladoC) ou (ladoA<>ladoB e ladoB=ladoC) ou (ladoB<>ladoC e ladoC=ladoA);
+   primeiraCondicaoIsosceles <- (ladoA=ladoB) e (ladoB<>ladoC);
+   segundaCondicaoIsosceles <- (ladoA<>ladoB) e (ladoB=ladoC);
+   terceiraCondicaoIsosceles <- (ladoB<>ladoC) e (ladoC=ladoA);
+   
+   oTrianguloPodeSerFormado <- ((ladoA+ladoB)>ladoC) e ((ladoA+ladoC)>ladoB) e ((ladoB+ladoC)>ladoA);
+   oTrianguloEhEquilatero <- (ladoA=ladoB) e (ladoB=ladoC) e oTrianguloPodeSerFormado;
+   oTrianguloEhEscaleno <- (ladoA<>ladoB) e (ladoB<>ladoC) e (ladoC<>ladoA) e oTrianguloPodeSerFormado;
+   oTrianguloEhIsosceles <-  (primeiraCondicaoIsosceles ou segundaCondicaoIsosceles ou terceiraCondicaoIsosceles) e oTrianguloPodeSerFormado;
 
    escreval("Um triângulo pode ser formado a partir desses lados? R: ",oTrianguloPodeSerFormado)
-   escreval("Esse triângulo é equilátero? R: ",oTrianguloEhEquilatero)
-   escreval("Esse triângulo é escaleno? R: ",oTrianguloEhEscaleno)
-   escreval("Esse triângulo é isósceles? R: ",oTrianguloEhIsosceles)
+   escreval("Se esse triângulo existe, ele é equilátero? R: ",oTrianguloEhEquilatero)
+   escreval("Se esse triângulo existe, ele é escaleno? R: ",oTrianguloEhEscaleno)
+   escreval("Se esse triângulo existe, ele é isósceles? R: ",oTrianguloEhIsosceles)
 
 Fimalgoritmo
